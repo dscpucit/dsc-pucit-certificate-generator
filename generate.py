@@ -14,15 +14,15 @@ file = pd.read_excel('event.csv')
 
 # Uni name is hard coded for CUI only, you can uncomment below option for making it generic
 # uniName = input("Enter University Name: ")
-uniName = "COMSATS University, Islamabad"
+uniName = "PUCIT, Lahore"
 
 # uniAcronym = input("Enter University Acronym: ")
-uniAcronym = "CUI"
+uniAcronym = "PUCIT"
 
 
 eventName = input("Enter Event Name: ")
 # leadName = input("Lead Name: ")
-leadName = "Muhammad Hamza"
+leadName = "Muhammad Ahmad Khan"
 
 currentDate = datetime.date(datetime.now())
 
@@ -82,7 +82,7 @@ for names in tqdm_gui(file['Name']):
     draw.text((950,920), 'Signing Authority', font=ImageFont.truetype('arial.ttf', size=22), fill='rgb(128,128,128)')
     draw.text((950,960), 'DSC ' + uniAcronym + ' Lead', font=ImageFont.truetype('./arialbd.ttf', size=25), fill='rgb(128,128,128)')
     draw.text((1640,1020),'#DeveloperStudentClubs',font=ImageFont.truetype('arial_italic.ttf', size=18),fill='rgb(211, 47, 47)')
-    draw.text((1640,950),'Certificate ID:',font=ImageFont.truetype('arial.ttf', size=20),fill=colorcert)
+#    draw.text((1640,950),'Certificate ID:',font=ImageFont.truetype('arial.ttf', size=20),fill=colorcert)
     draw.text((1640,980),f'Issue Date: {currentDate}',font=ImageFont.truetype('arial.ttf', size=20),fill=colorcert)
     image.save('certificates/'+names+'.png')
 
